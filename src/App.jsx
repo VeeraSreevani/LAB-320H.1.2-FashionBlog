@@ -1,37 +1,89 @@
-//import Article1 from './components/Article1'
-
-//import Article2 from './components/Article2'
 //import learnerData from './data/learners'
 //import Learner from './components/Learner'
 //import ArticleData from './data/article'
-
+//import Article1 from './components/Article1'
+//import Article2 from './components/Article2'
 
 
 import './App.css'
-//import Article from './components/Article'
 import image1 from './assets/blog-image-1.jpg'
-import Article1 from './components/Article1'
-import Article2 from './components/Article2'
+import image2 from './assets/blog-image-2.jpg'
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Article from './components/Article'
+//import ArticleData from './data/article'
 
 function App() {
-  // const str= "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque illum et asperiores nemo ducimus error iste tempore labore itaque! Voluptatem natus ducimus temporibus odio at quae? Alias necessitatibus mollitia beatae?"
 
   return (
-    <>
+    
     <div>
       <Header/>
       <Nav/>
       <br /><br />
-      <Article1/>
-      <hr/>
-      <Article2/>
-      <br />
+      <div>
+        <Article 
+          date = "10/11/20"
+          title = "On The Street in Brooklyn"
+          img = {image1}
+          content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa. Ab, nemo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa. Ab, nemo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa."
+          />
+        <hr/>
+        <Article
+          date = "11/11/20"
+          title = "Vintage in Vogue"
+          img = {image2}
+          content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa. Ab, nemo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa. Ab, nemo."
+          />
+        <br />
+      </div>
       <hr/>
       <br />
       <Footer/>
+
+    </div> 
+   ) }
+  
+  export default App
+
+
+// function App(){
+//   return(
+//     <div>
+//       <Header/>
+//       <hr />
+//       <Nav/>
+//       {
+//         ArticleData.map((item)=>(
+//           <Article
+//             date = {item.date}
+//             title = {item.title}
+//             img = {item.img}
+//             content = {item.content}
+//             />
+//         ))
+
+//       }
+//       <hr />
+//       <Footer/>
+//     </div>
+//   )
+// } export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -42,31 +94,12 @@ function App() {
             date = {item.date}
             title = {item.title}
             img = {item.img}
-            content = {item.content}/>
+            content = {item.content}
+            setCount = {updateCount}
+            />
         ))
 
-      } */}
-      {/* <article
-        date = "11/12/20" 
-        title = "On The Street in Brooklyn"
-        img = {image1}
-        content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa. Ab, nemo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa. Ab, nemo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa."
-        />
-         <article 
-          
-          date = "10/10/20"
-          title="Vintage in Vogue"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa. Ab, nemo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa. Ab, nemo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, assumenda dicta! A neque alias voluptatem minima perspiciatis esse nihil cupiditate enim? Quam enim aspernatur possimus odio officia culpa."
-          img={image2}
-          />  */}
-        
-    </div>
-      
-    </>
-  )
-}
-
-export default App
+      } */}    
 
 
 // ***********************************************************************
@@ -76,7 +109,8 @@ export default App
 //       key ={index}
 //       name = {item.name}
 //       age = {item.age}
-//       lastLogin = { item.lastLogin}/>
+//       lastLogin = { item.lastLogin}
+//        style = {{backgroundColor:'black', color:"#FFF"}}/>
 //   ))
 // }
 //OR
